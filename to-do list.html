@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>to-do list</title>
-  <link rel="stylesheet" href="to-do list.css">
-</head>
-<body>
-  <p class="tital">To-Do List</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>to-do list</title>
+    <link rel="stylesheet" href="to-do list.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p class="tital">To-Do List</p>
 
-  <div class="todo-input">
-    <input class="js-nameInput name-input" placeholder="To-Do task" type="text">
-    <input class="js-due-date due-date-input" type="date">
-    <button class="add-button js-add-button">Add</button>
-  </div>
+      <div class="todo-input">
+        <input
+          class="js-nameInput name-input"
+          placeholder="To-Do task"
+          type="text"
+        />
+        <input class="js-due-date due-date-input" type="date" />
+        <button class="add-button js-add-button">Add</button>
+      </div>
 
+      <div class="js-todoList to-do-grid"></div>
+    </div>
 
-  <div class="js-todoList to-do-grid"></div>
-
-  <script src="to-do list.js"></script>
-</body>
+    <script src="to-do list.js"></script>
+  </body>
 </html>
