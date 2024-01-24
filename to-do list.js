@@ -51,6 +51,15 @@ function AddTodo() {
   const dateinputEle = document.querySelector(".js-due-date");
   const dueDate = dateinputEle.value;
 
+  if (areInputsEmpty(name, dueDate)) {
+    placeChangeColor("red");
+    inputEle.placeholder = "Enter task name/ date";
+    return;
+  } else {
+    placeChangeColor("rgb(88, 88, 88)");
+    inputEle.placeholder = "Task name";
+  }
+
   todoList.push({
     // name: name,
     // dueDate: dueDate,
@@ -63,4 +72,12 @@ function AddTodo() {
   inputEle.value = "";
 
   renderTodoList();
+}
+function areInputsEmpty(name, dueDate) {
+  return !name || !dueDate;
+}
+function placeChangeColor(toColor) {
+  addCSS = document.createElement("style");
+  addCSS.innerHTML = "::placeholder { color: " + toColor + "; }";
+  document.body.append(addCSS);
 }
