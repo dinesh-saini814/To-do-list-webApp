@@ -4,6 +4,8 @@ body {
   align-items: center;
   justify-content: center;
   /* overflow: hidden; */
+  background-color: white;
+  margin: 0; /* Remove default margin */
 }
 
 .tital {
@@ -19,12 +21,11 @@ body {
   column-gap: 20px;
   row-gap: 10px;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   margin-bottom: 30px;
 }
 .to-do-grid {
-  margin-top: 30px;
-  margin-left: 40px;
+  margin-top: 10px;
 }
 
 .todo-input {
@@ -48,7 +49,8 @@ body {
 }
 .add-button {
   background-color: rgb(255, 240, 36);
-  color: rgb(0, 0, 0);
+  color: #3f3f3f;
+  font-weight: 550;
   border: none;
   font-size: 15px;
   cursor: pointer;
@@ -58,15 +60,16 @@ body {
 }
 .delete-button {
   background-color: rgb(223, 61, 61);
-  color: white;
+  color: rgb(230, 230, 230);
   border: none;
+  font-weight: 550;
   font-size: 15px;
   cursor: pointer;
   padding: 10px 10px;
   border-radius: 30px;
   width: 80px;
-  position: relative;
-  right: 20px;
+  /* position: relative;
+  right: 19px; */
 }
 
 .container {
@@ -77,9 +80,39 @@ body {
   margin-top: 20px;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
+  justify-content: center;
   flex-direction: column;
-  /* background: #c9d5e0; */
   border-radius: 10px;
   box-shadow: -3px -3px 7px #d1d1d173, 3px 3px 5px rgba(94, 104, 121, 0.288);
+}
+
+.container2 {
+  width: 92%;
+  height: 95%;
+  /* height: 90vh; */
+  /* background: linear-gradient(135deg, #f0f0f0, #e0e0e0); */
+  border-radius: 40px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: inset -3px -3px 7px #d3d3d373,
+    inset 3px 3px 5px rgba(153, 153, 153, 0.288);
+}
+
+li {
+  list-style-type: none;
+  font-weight: 550;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  color: #3f3f3f;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 15px;
+  /* box-shadow: -3px -3px 7px #d1d1d173, 3px 3px 5px rgba(94, 104, 121, 0.288); */
+  background: #ffed4c;
 }

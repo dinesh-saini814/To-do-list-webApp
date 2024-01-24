@@ -1,9 +1,8 @@
 const todoList = [
   {
-    name: "wash cloths",
+    name: "Buy Milk",
     dueDate: "2023-09-20",
   },
-  { name: "complete js", dueDate: "2023-09-16" },
 ];
 
 renderTodoList();
@@ -17,8 +16,8 @@ function renderTodoList() {
     const { name, dueDate } = todoObj;
 
     const html = `
-      <div class="to-do-work">${name} </div>
-      <div> ${dueDate} </div>
+      <li class="to-do-work">${name} </li>
+      <li class="to-do-date"> ${dueDate} </li>
       <button class="delete-button js-delete-button">Delete</button>
       
     `;
@@ -52,8 +51,10 @@ function AddTodo() {
   const dueDate = dateinputEle.value;
 
   if (areInputsEmpty(name, dueDate)) {
-    placeChangeColor("red");
+    placeChangeColor("rgb(223, 61, 61)");
     inputEle.placeholder = "Enter task name/ date";
+    inputEle.value = "";
+
     return;
   } else {
     placeChangeColor("rgb(88, 88, 88)");
